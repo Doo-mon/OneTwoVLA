@@ -1,6 +1,6 @@
 # OneTwoVLA: A Unified Vision-Language-Action Model with Adaptive Reasoning
 
-[[Project Page]](https://one-two-vla.github.io/)|[[Paper]]|[[Processed Datasets]](https://huggingface.co/datasets/Richard-Nai/onetwovla-dataset)
+[[Project Page]](https://one-two-vla.github.io/) [[Paper]](https://arxiv.org/abs/2505.11917) [[Processed Datasets]](https://huggingface.co/datasets/Richard-Nai/onetwovla-dataset)
 
 [Fanqi Lin](https://fanqi-lin.github.io/)<sup>1,2,3,5\*</sup>,
 [Ruiqian Nai](https://scholar.google.com/citations?hl=en&user=I0HLZAwAAAAJ)<sup>1,2,3,5\*</sup>,
