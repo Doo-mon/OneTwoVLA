@@ -3,7 +3,7 @@
 [[Project Page]](https://one-two-vla.github.io/) [[Paper]](https://arxiv.org/abs/2505.11917) [[Processed Datasets]](https://huggingface.co/datasets/Richard-Nai/onetwovla-dataset)
 
 [Fanqi Lin](https://fanqi-lin.github.io/)<sup>1,2,3,5\*</sup>,
-[Ruiqian Nai](https://scholar.google.com/citations?hl=en&user=I0HLZAwAAAAJ)<sup>1,2,3,5\*</sup>,
+[Ruiqian Nai](https://richard-coder-nai.github.io/)<sup>1,2,3,5\*</sup>,
 [Yingdong Hu](https://yingdong-hu.github.io/)<sup>1,2,3\*</sup>,
 [Jiacheng You](https://scholar.google.com/citations?user=FiP-TVUAAAAJ)<sup>1,2,3</sup>,
 Junming Zhao<sup>1,4</sup>,
@@ -26,6 +26,7 @@ Run the following to set up the environment:
 
 ```bash
 GIT_LFS_SKIP_SMUDGE=1 uv sync
+GIT_LFS_SKIP_SMUDGE=1 uv pip install -e .
 ```
 
 > NOTE: `GIT_LFS_SKIP_SMUDGE=1` is needed to pull LeRobot as a dependency.
