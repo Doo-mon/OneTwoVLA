@@ -13,15 +13,15 @@ echo val_batch_size $val_batch_size
 
 # the json file can be downloaded from https://huggingface.co/datasets/Richard-Nai/onetwovla-dataset/tree/main/cocktail
 # ensure the dataset's path is $LEROBOT_HOME/umi/cocktail
-reasoning_json_path=/path/to/your/cot.json
+reasoning_json_path=/cephfs/nairuiqian/codespace/pi-motion-generalization/assets/univla_cocktail/umi/cocktail/necessary/cot.json
 
 # normalization stats
 # this can only run on a single GPU.
 # this code only needs to run once.
-CUDA_VISIBLE_DEVICES=0 uv run scripts/compute_norm_stats.py onetwovla_cocktail --exp-name=computing-norm \
---create_train_val_split --val_ratio=0.05 \
---reasoning_json_path $reasoning_json_path \
---is_computing_norm_stats
+# CUDA_VISIBLE_DEVICES=0 uv run scripts/compute_norm_stats.py onetwovla_cocktail --exp-name=computing-norm \
+# --create_train_val_split --val_ratio=0.05 \
+# --reasoning_json_path $reasoning_json_path \
+# --is_computing_norm_stats
 
-XLA_PYTHON_CLIENT_MEM_FRACTION=0.95 uv run scripts/train.py onetwovla_cocktail --exp-name=${now_date}/${now_seconds}/onetwovla-cocktail --batch-size=$batch_size \
+XLA_PYTHON_CLIENT_MEM_FRACTION=0.95 uv run scripts/train.py onetwovla_cocktail --exp-name=${now_date}/${now_seconds}/onetwovla-cocktail --batch-size=$batch_size  --val-batch-size=$val_batch_size \
 --reasoning_json_path $reasoning_json_path

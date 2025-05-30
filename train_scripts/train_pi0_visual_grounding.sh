@@ -23,5 +23,5 @@ CUDA_VISIBLE_DEVICES=0 uv run scripts/compute_norm_stats.py pi0_visual_grounding
 --reasoning_json_path $reasoning_json_path \
 --is_computing_norm_stats
 
-XLA_PYTHON_CLIENT_MEM_FRACTION=0.95 uv run scripts/train.py pi0_visual_grounding --exp-name=${now_date}/${now_seconds}/pi0-visual-grounding --batch-size=$batch_size \
+XLA_PYTHON_CLIENT_MEM_FRACTION=0.95 uv run scripts/train.py pi0_visual_grounding --exp-name=${now_date}/${now_seconds}/pi0-visual-grounding --batch-size=$batch_size --val-batch-size=$val_batch_size \
 --reasoning_json_path $reasoning_json_path
